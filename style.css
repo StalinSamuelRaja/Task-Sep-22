@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+display: grid;
+grid-template: 
+"header header" 10vh
+"box box" 30vh
+"main main" 90vh;
+}
+
+header{
+grid-area: header;
+background-color: rgb(0, 0, 0);
+}
+
+main{
+ grid-area :main;
+overflow: hidden;   
+display: grid;    
+grid-template-columns: 50vw 50vw;
+grid-template-rows: 80vw 80vw; 
+margin: 10px;
+padding-top: 0px;
+}
+.box{
+    border: 5px solid black;
+    grid-area: box;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 15px;
+}
+.btn-grp{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+button{
+    border: none;
+    padding: 7px;
+    margin: 5px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+img{
+    width: 500px;
+height: 500px;
+margin: 0 auto;
+
+}
+.content-div{
+    text-align: left;
+    font-size: 20px;
+    padding-right: 50px;
+}
+.career{
+    padding-top: 0px;
+    display: flex;
+    padding-left: 500px;
+    padding-top: 100px;
+}
+.song{
+    
+    padding: 50px;
+    list-style:circle;
+    
+}
+.movies{
+    padding: 50px;
+    list-style:circle;
+    
+}
+.foot{
+    display: flex;
+    padding-left: 500px;
+    
+    padding-top: 100px;
+    border: 5px solid black;
+    height: 20vh;
+    color: #ffffff;
+    background-color: black;
+    margin-top: 0px;
+}
+.one{
+   padding: 50px; 
+   border-right: 2px solid white;
+   
+}
+.two{
+    padding: 50px; 
+    border-right: 2px solid white;
+ }
+ .three{
+    padding: 50px; 
+ }
+
+@media screen and (min-width:850px) and (max-width:1250px){
+
+img{
+height: 500px;
+}
+.content-div{
+    font-size: small;
+}
+}
+
+@media screen and (min-width: 450px) and (max-width:850px){
+    img{
+              height: 300px;
+           }
+           .content-div{
+                     font-size: smaller;
+           }   
+}
+
+@media screen and (max-width:450px){
+main{
+    grid-template-columns: 100vw;
+
+} 
+img {
+    height : 30vh;
+    
+}  
+.content-div{
+    font-size: smaller;
+    overflow: auto;
+    margin-left: 5vw;
+
+}      
+}
